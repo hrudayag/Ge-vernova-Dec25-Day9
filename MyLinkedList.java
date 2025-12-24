@@ -1,8 +1,22 @@
-public class MyLinkedList{
+public class MyLinkedList {
     MyNode head;
+    MyNode tail;
     public void add(MyNode newNode) {
-        newNode.next = head;
-        head = newNode;
+        if (head == null) {
+            head = tail = newNode;
+        } else {
+            newNode.next = head;
+            head = newNode;
+        }
+    }
+    // UC3
+    public void append(MyNode newNode) {
+        if (head == null) {
+            head = tail = newNode;
+        } else {
+            tail.next = newNode;
+            tail = newNode;
+        }
     }
 
     public void printList() {
