@@ -32,6 +32,28 @@ public class MyLinkedList {
             tail = null;
         return temp;
     }
+    // UC6
+    public MyNode popLast() {
+        if (head == null)
+            return null;
+
+        if (head == tail) {
+            MyNode temp = head;
+            head = tail = null;
+            return temp;
+        }
+
+        MyNode temp = head;
+        while (temp.next != tail) {
+            temp = temp.next;
+        }
+
+        MyNode removed = tail;
+        temp.next = null;
+        tail = temp;
+
+        return removed;
+    }
     public void printList() {
         MyNode temp = head;
         while (temp != null) {
