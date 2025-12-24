@@ -7,6 +7,15 @@ public class MyQueue<T> {
     public void enqueue(T item) {
         queue.addLast(item);
     }
+    public T dequeue() {
+        if (queue.isEmpty()) {
+            return null;
+        }
+        return queue.removeFirst();
+    }
+    public boolean isEmpty() {
+        return queue.isEmpty();
+    }
     public void printQueue() {
         System.out.println("Queue elements (Front to Rear):");
         for (T item : queue) {
@@ -18,7 +27,11 @@ public class MyQueue<T> {
         queue.enqueue(56);
         queue.enqueue(30);
         queue.enqueue(70);
-
         queue.printQueue();
+
+        System.out.println("\nDequeuing elements:");
+        while (!queue.isEmpty()) {
+            System.out.println(queue.dequeue());
+        }
     }
 }
