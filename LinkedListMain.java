@@ -8,7 +8,6 @@ public class LinkedListMain{
         list.add(node70);
         list.add(node30);
         list.add(node56);
-
         list.printList();
     }
 }
