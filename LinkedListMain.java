@@ -6,10 +6,7 @@ public class LinkedListMain {
         MyNode node70 = new MyNode(70);
         MyNode node30 = new MyNode(30);
 
-        list.append(node56);
-        list.append(node70);
-
-        list.insertAfter(node56, node30);
+        list.pop();
         list.printList();
     }
 }

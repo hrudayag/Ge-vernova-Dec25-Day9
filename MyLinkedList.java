@@ -22,6 +22,16 @@ public class MyLinkedList {
         newNode.next = prevNode.next;
         prevNode.next = newNode;
     }
+    // UC5
+    public MyNode pop() {
+        if (head == null)
+            return null;
+        MyNode temp = head;
+        head = head.next;
+        if (head == null)
+            tail = null;
+        return temp;
+    }
     public void printList() {
         MyNode temp = head;
         while (temp != null) {
