@@ -4,6 +4,7 @@ public class MyLinkedList{
         newNode.next = head;
         head = newNode;
     }
+
     public void printList() {
         MyNode temp = head;
         while (temp != null) {
