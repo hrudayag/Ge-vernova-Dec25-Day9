@@ -9,7 +9,6 @@ public class MyLinkedList {
             head = newNode;
         }
     }
-    // UC3
     public void append(MyNode newNode) {
         if (head == null) {
             head = tail = newNode;
@@ -18,7 +17,11 @@ public class MyLinkedList {
             tail = newNode;
         }
     }
-
+    // UC4
+    public void insertAfter(MyNode prevNode, MyNode newNode) {
+        newNode.next = prevNode.next;
+        prevNode.next = newNode;
+    }
     public void printList() {
         MyNode temp = head;
         while (temp != null) {
