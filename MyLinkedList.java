@@ -54,6 +54,17 @@ public class MyLinkedList {
 
         return removed;
     }
+    // UC7
+    public MyNode search(int key) {
+        MyNode temp = head;
+        while (temp != null) {
+            if (temp.data == key)
+                return temp;
+            temp = temp.next;
+        }
+        return null;
+    }
+
     public void printList() {
         MyNode temp = head;
         while (temp != null) {
