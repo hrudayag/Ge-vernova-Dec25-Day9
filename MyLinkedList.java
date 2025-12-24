@@ -64,7 +64,41 @@ public class MyLinkedList {
         }
         return null;
     }
+    // UC9: delete
+    public void delete(int key) {
+        if (head == null)
+            return;
 
+        if (head.data == key) {
+            pop();
+            return;
+        }
+
+        MyNode prev = head;
+        MyNode curr = head.next;
+
+        while (curr != null) {
+            if (curr.data == key) {
+                prev.next = curr.next;
+                if (curr == tail) {
+                    tail = prev;
+                }
+                return;
+            }
+            prev = curr;
+            curr = curr.next;
+        }
+    }
+    // UC9: size
+    public int size() {
+        int count = 0;
+        MyNode temp = head;
+        while (temp != null) {
+            count++;
+            temp = temp.next;
+        }
+        return count;
+    }
     public void printList() {
         MyNode temp = head;
         while (temp != null) {

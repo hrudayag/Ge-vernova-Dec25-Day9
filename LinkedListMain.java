@@ -4,13 +4,11 @@ public class LinkedListMain {
 
         list.append(new MyNode(56));
         list.append(new MyNode(30));
+        list.append(new MyNode(40));
         list.append(new MyNode(70));
         list.printList();
-
-        MyNode node30 = list.search(30);
-        if (node30 != null) {
-            list.insertAfter(node30, new MyNode(40));
-        }
+        list.delete(40);
         list.printList();
+        System.out.println("Size: " + list.size());
     }
 }
